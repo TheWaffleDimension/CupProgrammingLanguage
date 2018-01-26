@@ -5,6 +5,7 @@
 #include <regex>
 #include <string>
 #include <iostream>
+#include <algorithm>
 
 #include "strUtils.h"
 
