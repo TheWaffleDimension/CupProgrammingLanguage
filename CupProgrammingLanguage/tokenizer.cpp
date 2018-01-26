@@ -6,17 +6,17 @@ namespace Cup {
 			m_str(str),
 			m_lastToken("", TokenType::EMPTY)
 		{
-			m_tokenDatas.push_back(TokenData(std::regex("^([a-zA-Z_][a-zA-Z0-9_]*)"), TokenType::IDENTIFIER));
+			m_tokenDatas.push_back(TokenData(std::regex("^([a-zA-Z][a-zA-Z0-9]*)"), TokenType::IDENTIFIER));
 			m_tokenDatas.push_back(TokenData(std::regex("^((-)?[0-9]+)"), TokenType::INTEGER_LITERAL));
 			m_tokenDatas.push_back(TokenData(std::regex("^([-]?[0-9]*\.?[0-9]+)"), TokenType::FLOAT_LITERAL));
 			m_tokenDatas.push_back(TokenData(std::regex("^(\".*\")"), TokenType::STRING_LITERAL));
 
 			std::string tokens[10] = {
-				"=",
-				"\\(",
-				"\\)",
-				"\\.",
-				"\\,"
+				"^(=)",
+				"^(\\()",
+				"^(\\))",
+				"^(\\.)",
+				"^(\\,)"
 			};
 
 			for (std::string token : tokens) 
@@ -56,7 +56,7 @@ namespace Cup {
 
 				if (res.ready() && !res.empty())
 				{
-					std::string token = trim_copy(res.str());
+					std::string token = trim_copy(res[0]);
 
 					m_str = std::regex_replace(m_str, data.getPattern(), "");
 
@@ -72,6 +72,8 @@ namespace Cup {
 			}
 
 			std::cout << "Could not parse " + m_str << std::endl;
+			system("PAUSE");
+			throw std::exception{ "Error parsing input string" };
 		}
 
 		bool Tokenizer::hasNextToken()

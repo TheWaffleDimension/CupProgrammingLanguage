@@ -6,15 +6,19 @@ using namespace Cup;
 int main() {
 	std::cout << "Welcome to Cup." << std::endl;
 
-	std::string code = R"(class HelloWorld)" "\n"
-					   R"(function main()<>)" "\n"
-					   R"(print("Hello World"))";
+	std::string code = "class HelloWorld\nfunction main()<>\nprint(\"Hello World\")";
 
 	Tokenizer::Tokenizer tokenizer(code);
 
 	while (tokenizer.hasNextToken())
 	{
-		std::cout << "Token: " << tokenizer.nextToken().getToken() << std::endl;
+		try {
+			std::cout << "Token: " << tokenizer.nextToken().getToken() << std::endl;
+		}
+		catch (const std::exception &ex) {
+			std::cout << ex.what() << std::endl;
+			break;
+		}
 	}
 
 	system("PAUSE");
