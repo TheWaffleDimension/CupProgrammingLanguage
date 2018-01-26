@@ -1,0 +1,26 @@
+<identifier>:
+First character is a letter or underscore, any proceeding characters are alphanumeric or underscore characters.
+
+<type>:
+A primitive type: string, int, boolean, etc.
+
+<value>:
+Either an identifier (for a variable) or a literal (1, "Hello World", true, false)
+
+Class Declaration:
+`class <identifier>`
+
+Method Declaration:
+`function <identifier>([<type> <identifier = name>, ...])<[<type>]>
+
+Method Invocation:
+`<identifier = name>([<value>, ...])`
+
+Variable Declaration:
+`var <type> <identifier = name> [= <value>]`
+
+Print Statement:
+`print(<value>)`
+
+Return Statement:
+`return <value>`

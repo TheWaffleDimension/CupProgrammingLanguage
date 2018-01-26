@@ -111,6 +111,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="strUtils.h" />
+    <ClInclude Include="token.h" />
+    <ClInclude Include="tokenData.h" />
+    <ClInclude Include="tokenizer.h" />
+    <ClInclude Include="tokenType.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="token.cpp" />
+    <ClCompile Include="tokenData.cpp" />
+    <ClCompile Include="tokenizer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="grammar.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HelloWorld.cup" />
+    <None Include="Variables.cup" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

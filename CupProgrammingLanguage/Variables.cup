@@ -1,0 +1,10 @@
+class Variables
+	function main()<>
+		string str = getString()
+		printString(str)
+
+	function printString(string str)<>
+		print(str)
+
+	function getString()<string>
+		return "Hello World"
