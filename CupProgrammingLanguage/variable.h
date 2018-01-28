@@ -7,7 +7,7 @@
 #include "block.h"
 
 namespace Cup {
-	class Variable : Value
+	class Variable
 	{
 	public:
 		Variable::Variable(Block::Block* block, Type type, std::string name, Any* value);
@@ -15,9 +15,15 @@ namespace Cup {
 
 		Block::Block* getBlock();
 		std::string getName();
+
+		Type getType() const;
+		Any getValue() const;
+		void setValue(Any value);
 	protected:
 
 	private:
+		Type m_type;
+		Any* m_value;
 		Block::Block* m_block;
 		std::string m_name;
 	};

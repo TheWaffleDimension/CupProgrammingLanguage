@@ -22,4 +22,18 @@ namespace Cup {
 	{
 		return m_name;
 	}
+
+	Type Variable::getType() const
+	{
+		return m_type;
+	}
+
+	Any Variable::getValue() const
+	{
+		return m_value;
+	}
+
+	void Variable::setValue(Any value) {
+		m_value = value;
+	}
 }

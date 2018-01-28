@@ -22,10 +22,12 @@ namespace Cup {
 	{
 		return m_type;
 	}
+
 	Any Value::getValue() const
 	{
 		return m_value;
 	}
+
 	void Value::setValue(Any value) {
 		m_value = value;
 	}
