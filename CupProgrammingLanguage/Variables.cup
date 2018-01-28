@@ -1,6 +1,6 @@
 class Variables
-	function main()<>
-		string str = getString()
+	function main()<void>
+		var string str = getString()
 		printString(str)
 
 	function printString(string str)<>

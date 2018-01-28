@@ -22,9 +22,10 @@ namespace Cup {
 
 			for (std::string token : tokens) 
 			{
-				m_tokenDatas.push_back(TokenData(std::regex(token), TokenType::TOKEN));
+				m_tokenDatas.push_back(TokenData(std::regex("^(" + token + ")"), TokenType::TOKEN));
 			}
 
+			std::replace(str.begin(), str.end(), '	', ' ');
 			std::replace(str.begin(), str.end(), '\n', ' ');
 			m_str = str;
 		}

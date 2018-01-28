@@ -111,17 +111,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="any.h" />
+    <ClInclude Include="block.h" />
+    <ClInclude Include="class.h" />
+    <ClInclude Include="classParser.h" />
+    <ClInclude Include="method.h" />
+    <ClInclude Include="methodParser.h" />
+    <ClInclude Include="parameter.h" />
+    <ClInclude Include="parser.h" />
     <ClInclude Include="strUtils.h" />
     <ClInclude Include="token.h" />
     <ClInclude Include="tokenData.h" />
     <ClInclude Include="tokenizer.h" />
     <ClInclude Include="tokenType.h" />
+    <ClInclude Include="type.h" />
+    <ClInclude Include="value.h" />
+    <ClInclude Include="variable.h" />
+    <ClInclude Include="variableParser.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="block.cpp" />
+    <ClCompile Include="class.cpp" />
+    <ClCompile Include="classParser.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="method.cpp" />
+    <ClCompile Include="methodParser.cpp" />
+    <ClCompile Include="parameter.cpp" />
+    <ClCompile Include="parser.cpp" />
     <ClCompile Include="token.cpp" />
     <ClCompile Include="tokenData.cpp" />
     <ClCompile Include="tokenizer.cpp" />
+    <ClCompile Include="value.cpp" />
+    <ClCompile Include="variable.cpp" />
+    <ClCompile Include="variableParser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="grammar.txt" />
@@ -129,6 +151,9 @@
   <ItemGroup>
     <None Include="HelloWorld.cup" />
     <None Include="Variables.cup" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CupProgrammingLanguage.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

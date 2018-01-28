@@ -6,7 +6,7 @@ using namespace Cup;
 int main() {
 	std::cout << "Welcome to Cup." << std::endl;
 
-	std::string code = "class HelloWorld\nfunction main()<>\nprint \"Hello World\"";
+	std::string code = "class HelloWorld\nfunction main(string str)<int>\nprint str\nreturn 0";
 
 	Tokenizer::Tokenizer tokenizer(code);
 
