@@ -51,7 +51,8 @@ namespace Cup {
 			}
 
 			// Add this variable to the block.
-			superBlock->addVariable(Variable(superBlock, type, name, value));
+			//Variable var = Variable(superBlock, type, name, value);
+			//superBlock->addVariable(var);
 			return nullptr;
 		}
 	}

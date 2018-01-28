@@ -3,8 +3,10 @@
 #include <vector>
 #include <string>
 #include "variable.h"
+#include "any.h"
 
 namespace Cup {
+	class Variable;
 	namespace Block {
 		/* Represents a block of code */
 		class Block
@@ -39,7 +41,7 @@ namespace Cup {
 						return v;
 				}
 
-				return;
+				return Variable{};
 			}
 		protected:
 

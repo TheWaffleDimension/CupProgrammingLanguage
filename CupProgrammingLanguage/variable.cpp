@@ -2,7 +2,7 @@
 
 
 namespace Cup {
-	Variable::Variable(Block::Block* block, Type type, std::string name, Any* value)
+	Variable::Variable(Block::Block* block = nullptr, Type type = Type::INTEGER, std::string name = "", Any* value = 0)
 	{
 		m_block = block;
 		m_name = name;

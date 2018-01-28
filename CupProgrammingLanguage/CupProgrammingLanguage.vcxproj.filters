@@ -82,7 +82,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="variableParser.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Parser</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -126,7 +126,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="variableParser.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Parser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

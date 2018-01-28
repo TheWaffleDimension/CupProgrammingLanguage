@@ -7,7 +7,10 @@
 #include "block.h"
 
 namespace Cup {
-	class Variable
+	namespace Block {
+		class Block;
+	}
+	class Variable : public Value
 	{
 	public:
 		Variable::Variable(Block::Block* block, Type type, std::string name, Any* value);
